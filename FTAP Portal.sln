@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FTAP Portal", "FTAP Portal\FTAP Portal.csproj", "{BE0142DD-6D8D-4168-9902-0E08712695A2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE0142DD-6D8D-4168-9902-0E08712695A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE0142DD-6D8D-4168-9902-0E08712695A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE0142DD-6D8D-4168-9902-0E08712695A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE0142DD-6D8D-4168-9902-0E08712695A2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

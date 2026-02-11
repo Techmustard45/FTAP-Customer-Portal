@@ -1,0 +1,22 @@
+﻿@model IEnumerable<Laptimes>
+
+<table class="table">
+    <tr>
+        <th>Ranking</th>
+        <th>Laptime</th>
+        <th>Racer Name</th>
+        <th>Kart #</th>
+    </tr>
+    @{ int ranking = 1; }
+    @foreach (var laptimes in @Model)
+    {
+        <tr>
+            <td>@ranking</td>
+            <td>@laptimes.laptime</td>
+            <td>@laptimes.racername</td>
+            <td>@laptimes.kart</td>
+        </tr>
+        ranking++;
+    }
+    
+</table>
