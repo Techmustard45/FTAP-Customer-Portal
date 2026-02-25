@@ -24,12 +24,12 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/elias/OneDrive/Desktop/repos/FTAP Portal/FTAP Portal/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/elias/OneDrive/Desktop/repos/FTAP Portal/FTAP Portal/Views/Laptimes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFwdGltZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/elias/OneDrive/Desktop/repos/FTAP Portal/FTAP Portal/Views/Laptimes/ViewRacer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFwdGltZXNcVmlld1JhY2VyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/elias/OneDrive/Desktop/repos/FTAP Portal/FTAP Portal/Views/Shared/Error.cshtml]

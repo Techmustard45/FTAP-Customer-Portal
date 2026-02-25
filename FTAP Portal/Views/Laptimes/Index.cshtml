@@ -1,5 +1,9 @@
 ﻿@model IEnumerable<Laptimes>
 
+@{
+    ViewData["Title"] = "Laptimes";
+}
+
 <table class="table">
     <tr>
         <th>Ranking</th>
@@ -13,7 +17,7 @@
         <tr>
             <td>@ranking</td>
             <td>@laptimes.laptime</td>
-            <td>@laptimes.racername</td>
+            <td><a href="Laptimes/ViewRacer/@laptimes.customerid" class = text-black>@laptimes.racername </a></td>
             <td>@laptimes.kart</td>
         </tr>
         ranking++;

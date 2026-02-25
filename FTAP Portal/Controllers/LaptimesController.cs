@@ -18,4 +18,10 @@ public class LaptimesController : Controller
         var laptimes = _repo.GetAllTimes();
         return View(laptimes);
     }
+
+    public IActionResult ViewRacer(string id)
+    {
+        var racer = _repo.GetRacer(id);
+        return View(racer);
+    }
 }
