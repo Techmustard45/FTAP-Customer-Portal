@@ -25,3 +25,25 @@
         <td>@Model.averagelaptime</td>
     </tr>
 </table>
+
+<div style="display: block">
+    <a href="/Laptimes/UpdateCustomer/@Model.customerid">Update this Customer</a>
+</div>
+
+<div style="display: block">
+    <a href = "/Laptimes/AddLaptime/@Model.customerid">Add a Time For This Customer</a>
+</div>
+
+@using (Html.BeginForm("DeleteLaptimeFromDatabase", "Laptimes", "Post"))
+{
+    <div class="form-group">
+        <label for="">Delete a Laptime</label>
+        <select class="form-control" name="LaptimeID" value="">
+            @foreach (var laptime in Model.laptimes)
+            {
+                <option value="@laptime.LaptimeID">@laptime.laptime</option>
+            }
+        </select>
+    </div>
+    <input type="submit" value="Delete Laptime" class="btn btn-primary"/>
+}

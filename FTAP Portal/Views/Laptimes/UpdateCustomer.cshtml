@@ -1,0 +1,16 @@
+﻿@model Customer
+
+<h2>Update @Model.racername</h2>
+
+@using (Html.BeginForm("UpdateCustomerToDatabase", "Laptimes", "Post"))
+{
+    <input asp-for="customerid" type="hidden" value="@Model.customerid" />
+
+    <label asp-for="racername" class="control-label">Racername</label>
+    <input type="text" name="racername" class="form-control" value="@Model.racername" />
+
+    <label asp-for="email" class="control-label">Email</label>    
+    <input type="email" name="email" class="form-control" value="@Model.email" />
+
+    <input type="submit" value="Update Customer" class="btn btn-primary" />
+}

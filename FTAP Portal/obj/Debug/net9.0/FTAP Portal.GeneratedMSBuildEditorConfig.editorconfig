@@ -24,8 +24,16 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/elias/OneDrive/Desktop/repos/FTAP Portal/FTAP Portal/Views/Laptimes/AddLaptime.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFwdGltZXNcQWRkTGFwdGltZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/elias/OneDrive/Desktop/repos/FTAP Portal/FTAP Portal/Views/Laptimes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFwdGltZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/elias/OneDrive/Desktop/repos/FTAP Portal/FTAP Portal/Views/Laptimes/UpdateCustomer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFwdGltZXNcVXBkYXRlQ3VzdG9tZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/elias/OneDrive/Desktop/repos/FTAP Portal/FTAP Portal/Views/Laptimes/ViewRacer.cshtml]

@@ -1,0 +1,18 @@
+﻿@model Laptimes
+
+<h2>Add a New Laptime</h2>
+
+@using (Html.BeginForm("AddLaptimeToDatabase", "Laptimes", "Post"))
+{
+    <input asp-for="customerid" type="hidden" value="@Model.customerid" />
+    
+    <input asp-for="racername" type="hidden" value="@Model.racername" />
+    
+    <label asp-for = "laptime" class = "control-label">New Laptime</label>
+    <input type = "number" step = 0.001 name = "laptime" class = "form-control" value="" />
+    
+    <label asp-for = "kart" class = "control-label">Kart #</label>
+    <input type = "number" name = "kart" class = "form-control" value="" />
+    
+    <input type="submit" value="Add Laptime" class="btn btn-primary" />
+}
