@@ -18,9 +18,7 @@ C:\Users\elias\OneDrive\Desktop\repos\FTAP Portal\FTAP Portal\obj\Debug\net9.0\F
 C:\Users\elias\OneDrive\Desktop\repos\FTAP Portal\FTAP Portal\obj\Debug\net9.0\rjimswa.dswa.cache.json
 C:\Users\elias\OneDrive\Desktop\repos\FTAP Portal\FTAP Portal\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
 C:\Users\elias\OneDrive\Desktop\repos\FTAP Portal\FTAP Portal\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
-C:\Users\elias\OneDrive\Desktop\repos\FTAP Portal\FTAP Portal\obj\Debug\net9.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\elias\OneDrive\Desktop\repos\FTAP Portal\FTAP Portal\obj\Debug\net9.0\scopedcss\bundle\FTAP Portal.styles.css
-C:\Users\elias\OneDrive\Desktop\repos\FTAP Portal\FTAP Portal\obj\Debug\net9.0\scopedcss\projectbundle\FTAP Portal.bundle.scp.css
 C:\Users\elias\OneDrive\Desktop\repos\FTAP Portal\FTAP Portal\obj\Debug\net9.0\compressed\e2p711v5tf-b9sayid5wm.gz
 C:\Users\elias\OneDrive\Desktop\repos\FTAP Portal\FTAP Portal\obj\Debug\net9.0\compressed\rkvi3wym2k-61n19gt1b8.gz
 C:\Users\elias\OneDrive\Desktop\repos\FTAP Portal\FTAP Portal\obj\Debug\net9.0\compressed\2dtbma8m4d-xtxxf3hu2r.gz
@@ -113,6 +111,8 @@ C:\Users\elias\OneDrive\Desktop\repos\FTAP Portal\FTAP Portal\bin\Debug\net9.0\r
 C:\Users\elias\OneDrive\Desktop\repos\FTAP Portal\FTAP Portal\obj\Debug\net9.0\FTAP Portal.csproj.AssemblyReference.cache
 C:\Users\elias\OneDrive\Desktop\repos\FTAP Portal\FTAP Portal\obj\Debug\net9.0\FTAP Por.F648F4E3.Up2Date
 C:\Users\elias\OneDrive\Desktop\repos\FTAP Portal\FTAP Portal\obj\Debug\net9.0\FTAP Portal.sourcelink.json
-C:\Users\elias\OneDrive\Desktop\repos\FTAP Portal\FTAP Portal\obj\Debug\net9.0\compressed\f52ewqxslf-5ipweew5fc.gz
+C:\Users\elias\OneDrive\Desktop\repos\FTAP Portal\FTAP Portal\obj\Debug\net9.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\elias\OneDrive\Desktop\repos\FTAP Portal\FTAP Portal\obj\Debug\net9.0\scopedcss\projectbundle\FTAP Portal.bundle.scp.css
 C:\Users\elias\OneDrive\Desktop\repos\FTAP Portal\FTAP Portal\obj\Debug\net9.0\compressed\l4nesw8vod-o5tqh062be.gz
 C:\Users\elias\OneDrive\Desktop\repos\FTAP Portal\FTAP Portal\obj\Debug\net9.0\compressed\ui8m2d8x2m-o5tqh062be.gz
+C:\Users\elias\OneDrive\Desktop\repos\FTAP Portal\FTAP Portal\obj\Debug\net9.0\compressed\f52ewqxslf-u7lkcnyebi.gz

@@ -1,0 +1,103 @@
+/* Global */
+body {
+    background-color: #0d0d0d;
+    color: #ffffff;
+}
+
+h2 {
+    color: #ff2b2b;
+    margin-bottom: 20px;
+}
+
+/* Cards */
+.card {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Table */
+table.table {
+    background-color: #1a1a1a !important;
+    color: white !important;
+}
+
+table.table th {
+    color: #ff2b2b;
+    width: 40%;
+}
+
+table.table td {
+    color: #ffffff;
+}
+
+table.table th,
+table.table td {
+    border-color: #333 !important;
+    background-color: #1a1a1a !important;
+}
+
+table.table tbody tr:hover {
+    background-color: #262626 !important;
+}
+
+/* Top 3 highlight */
+.gold {
+    background-color: #332200 !important;
+}
+
+.silver {
+    background-color: #2a2a2a !important;
+}
+
+.bronze {
+    background-color: #2b1a12 !important;
+}
+
+/* Buttons */
+.btn-red {
+    background-color: #ff2b2b;
+    border: none;
+    color: white;
+}
+
+.btn-red:hover {
+    background-color: #cc0000;
+}
+
+.btn-outline {
+    border: 1px solid #ff2b2b;
+    color: #ff2b2b;
+}
+
+.btn-outline:hover {
+    background-color: #ff2b2b;
+    color: white;
+}
+
+/* Forms */
+.form-control {
+    background-color: #1a1a1a !important;
+    color: white !important;
+    border: 1px solid #333;
+}
+
+.form-control::placeholder {
+    color: #aaa;
+}
+
+label {
+    color: #ff2b2b;
+}
+
+/* Links */
+a {
+    color: #ff4d4d;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff1a1a;
+}

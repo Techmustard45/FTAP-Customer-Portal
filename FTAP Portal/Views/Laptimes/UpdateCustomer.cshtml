@@ -1,16 +1,38 @@
 ﻿@model Customer
 
-<h2>Update @Model.racername</h2>
+<div class="container mt-5" style="max-width: 600px;">
 
-@using (Html.BeginForm("UpdateCustomerToDatabase", "Laptimes", "Post"))
-{
-    <input asp-for="customerid" type="hidden" value="@Model.customerid" />
+    <!-- Header -->
+    <div class="text-center mb-4">
+        <h2>Update @Model.racername</h2>
+    </div>
 
-    <label asp-for="racername" class="control-label">Racername</label>
-    <input type="text" name="racername" class="form-control" value="@Model.racername" />
+    <!-- Form Card -->
+    <div class="card">
+        @using (Html.BeginForm("UpdateCustomerToDatabase", "Laptimes", FormMethod.Post))
+        {
+            <input asp-for="customerid" type="hidden" value="@Model.customerid" />
 
-    <label asp-for="email" class="control-label">Email</label>    
-    <input type="email" name="email" class="form-control" value="@Model.email" />
+            <div class="form-group mb-3">
+                <label asp-for="racername">Racer Name</label>
+                <input type="text" name="racername" class="form-control" value="@Model.racername" />
+            </div>
 
-    <input type="submit" value="Update Customer" class="btn btn-primary" />
-}
+            <div class="form-group mb-4">
+                <label asp-for="email">Email</label>
+                <input type="email" name="email" class="form-control" value="@Model.email" />
+            </div>
+
+            <!-- Buttons -->
+            <div class="d-flex justify-content-between">
+
+                <a href="/Laptimes/ViewRacer/@Model.customerid" class="btn btn-outline">
+                    ⬅ Cancel
+                </a>
+
+                <input type="submit" value="Update Customer" class="btn btn-red px-4" />
+            </div>
+        }
+    </div>
+
+</div>

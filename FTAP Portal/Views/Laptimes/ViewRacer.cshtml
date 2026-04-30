@@ -1,49 +1,76 @@
 ﻿@model Customer
 
-<h2>@Model.racername Information</h2>
+<div class="container mt-5" style="max-width: 800px;">
 
-<table class="table">
-
-    <tr>
-        <th>ProSkill</th>
-        <td>@Model.proskill</td>
-    </tr>
-
-    <tr>
-        <th>Loyalty Points</th>
-        <td>@Model.loyaltypoints</td>
-    </tr>
-
-    <tr>
-        <th>Fastest Laptime</th>
-        <td>@Model.fastestlaptime</td>
-    </tr>
-
-
-    <tr>
-        <th>Average Laptime</th>
-        <td>@Model.averagelaptime</td>
-    </tr>
-</table>
-
-<div style="display: block">
-    <a href="/Laptimes/UpdateCustomer/@Model.customerid">Update this Customer</a>
-</div>
-
-<div style="display: block">
-    <a href = "/Laptimes/AddLaptime/@Model.customerid">Add a Time For This Customer</a>
-</div>
-
-@using (Html.BeginForm("DeleteLaptimeFromDatabase", "Laptimes", "Post"))
-{
-    <div class="form-group">
-        <label for="">Delete a Laptime</label>
-        <select class="form-control" name="LaptimeID" value="">
-            @foreach (var laptime in Model.laptimes)
-            {
-                <option value="@laptime.LaptimeID">@laptime.laptime</option>
-            }
-        </select>
+    <!-- Header -->
+    <div class="mb-4 text-center">
+        <h2>@Model.racername</h2>
+        <p>Racer Profile</p>
     </div>
-    <input type="submit" value="Delete Laptime" class="btn btn-primary"/>
-}
+
+    <!-- Info Card -->
+    <div class="card">
+        <table class="table mb-0">
+            <tr>
+                <th>Pro Skill</th>
+                <td>@Model.proskill</td>
+            </tr>
+            <tr>
+                <th>Loyalty Points</th>
+                <td>@Model.loyaltypoints</td>
+            </tr>
+            <tr>
+                <th>Fastest Laptime</th>
+                <td>@Model.fastestlaptime</td>
+            </tr>
+            <tr>
+                <th>Average Laptime</th>
+                <td>@Model.averagelaptime</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="d-flex justify-content-center gap-3 my-4 flex-wrap">
+
+        <a href="/Laptimes/UpdateCustomer/@Model.customerid"
+           class="btn btn-outline px-4 py-2">
+            ✏️ Update Customer
+        </a>
+
+        <a href="/Laptimes/AddLaptime/@Model.customerid"
+           class="btn btn-red px-4 py-2">
+            ➕ Add Laptime
+        </a>
+
+    </div>
+
+    <!-- Delete Form -->
+    <div class="card">
+        @using (Html.BeginForm("DeleteLaptimeFromDatabase", "Laptimes", FormMethod.Post))
+        {
+            <div class="form-group mb-3">
+                <label>Delete a Laptime</label>
+                <select class="form-control" name="LaptimeID">
+                    @foreach (var laptime in Model.laptimes)
+                    {
+                        <option value="@laptime.LaptimeID">
+                            @laptime.laptime
+                        </option>
+                    }
+                </select>
+            </div>
+
+            <div class="text-end">
+                <input type="submit" value="Delete Laptime" class="btn btn-red" />
+            </div>
+        }
+    </div>
+    
+    <div class="text-center mt-4">
+        <a href="/Laptimes" class="btn btn-outline px-4 py-2">
+            ⬅ Back to Leaderboard
+        </a>
+    </div>
+
+</div>

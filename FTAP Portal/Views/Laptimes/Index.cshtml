@@ -1,26 +1,69 @@
 ﻿@model IEnumerable<Laptimes>
+<head>
+    <link rel="stylesheet" href="~/FTAP_Portal.styles.css" asp-append-version="true"/>
+</head>
 
 @{
     ViewData["Title"] = "Laptimes";
 }
 
-<table class="table">
-    <tr>
-        <th>Ranking</th>
-        <th>Laptime</th>
-        <th>Racer Name</th>
-        <th>Kart #</th>
-    </tr>
-    @{ int ranking = 1; }
-    @foreach (var laptimes in @Model)
-    {
+<div class="container mt-4">
+
+    <!-- Header -->
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2>Laptimes Leaderboard</h2>
+        <a href="" class="btn btn-primary">Refresh</a>
+    </div>
+
+    <!-- Search -->
+    <div class="mb-3">
+        <input type="text" id="searchInput" class="form-control" placeholder="Search racer name...">
+    </div>
+
+    <!-- Table -->
+    <table class="table table-hover" id="laptimeTable">
+        <thead>
         <tr>
-            <td>@ranking</td>
-            <td>@laptimes.laptime</td>
-            <td><a href="Laptimes/ViewRacer/@laptimes.customerid" class = text-black>@laptimes.racername </a></td>
-            <td>@laptimes.kart</td>
+            <th>Ranking</th>
+            <th>Laptime</th>
+            <th>Racer Name</th>
+            <th>Kart #</th>
         </tr>
-        ranking++;
-    }
-    
-</table>
+        </thead>
+        <tbody>
+        @{ int ranking = 1; }
+        @foreach (var laptimes in Model)
+        {
+            var rowClass = ranking == 1 ? "gold"
+                : ranking == 2 ? "silver"
+                : ranking == 3 ? "bronze"
+                : "";
+
+            <tr class="@rowClass">
+                <td>@ranking</td>
+                <td>@laptimes.laptime</td>
+                <td>
+                    <a href="Laptimes/ViewRacer/@laptimes.customerid">
+                        @laptimes.racername
+                    </a>
+                </td>
+                <td>@laptimes.kart</td>
+            </tr>
+
+            ranking++;
+        }
+        </tbody>
+    </table>
+</div>
+
+<script>
+    document.getElementById("searchInput").addEventListener("keyup", function () {
+        let filter = this.value.toLowerCase();
+        let rows = document.querySelectorAll("#laptimeTable tbody tr");
+
+        rows.forEach(row => {
+            let name = row.cells[2].innerText.toLowerCase();
+            row.style.display = name.includes(filter) ? "" : "none";
+        });
+    });
+</script>
