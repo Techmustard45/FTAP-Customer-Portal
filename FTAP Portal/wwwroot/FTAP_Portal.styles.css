@@ -1,15 +1,21 @@
-/* Global */
+
+/* =========================
+   GLOBAL
+========================= */
 body {
-    background-color: #0d0d0d;
+    background: radial-gradient(circle at top, #1a1a1a 0%, #0d0d0d 60%, #070707 100%);
     color: #ffffff;
 }
 
 h2 {
     color: #ff2b2b;
     margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(255, 43, 43, 0.2);
 }
 
-/* Cards */
+/* =========================
+   CARD LAYOUT
+========================= */
 .card {
     background-color: #1a1a1a;
     border: 1px solid #333;
@@ -18,45 +24,206 @@ h2 {
     margin-bottom: 20px;
 }
 
-/* Table */
+/* Optional wrapper for leaderboard */
+.leaderboard-card {
+    background: linear-gradient(145deg, #1a1a1a, #141414);
+    border: 1px solid #2a2a2a;
+    border-radius: 16px;
+    padding: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+/* =========================
+   TABLE BASE
+========================= */
 table.table {
-    background-color: #1a1a1a !important;
-    color: white !important;
+    background: transparent;
+    color: white;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    margin-bottom: 0;
 }
 
-table.table th {
-    color: #ff2b2b;
-    width: 40%;
-}
-
-table.table td {
-    color: #ffffff;
-}
-
+/* Remove Bootstrap cell boxing completely */
 table.table th,
 table.table td {
-    border-color: #333 !important;
-    background-color: #1a1a1a !important;
+    background-color: transparent !important;
+    color: white;
+    border-color: #2a2a2a;
+    vertical-align: middle;
+    padding: 14px 12px;
 }
 
+/* Header */
+table.table thead th {
+    background-color: #111;
+    color: #ff2b2b;
+    border-bottom: 2px solid #ff2b2b;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+}
+
+/* Base rows */
+table.table tbody tr {
+    background: #1a1a1a;
+    transition: all 0.2s ease;
+}
+
+/* Alternating rows */
+table.table tbody tr:nth-child(even) {
+    background: #161616;
+}
+
+/* Hover effect */
 table.table tbody tr:hover {
-    background-color: #262626 !important;
+    background: #222;
+    transform: scale(1.01);
 }
 
-/* Top 3 highlight */
+/* =========================
+   TOP 3 PODIUM ROWS
+========================= */
+table.table tbody tr.gold {
+    background: linear-gradient(90deg, rgba(255,215,0,0.08), transparent 100%);
+    border: none;
+}
+
+table.table tbody tr.silver {
+    background: linear-gradient(90deg, rgba(192,192,192,0.08), transparent 100%);
+    border: none;
+}
+
+table.table tbody tr.bronze {
+    background: linear-gradient(90deg, rgba(205,127,50,0.08), transparent 100%);
+    border: none;
+}
+
+/* =========================
+   LAP TIME (TELEMETRY STYLE)
+========================= */
+table.table td:nth-child(2) {
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+    color: #00ff88;
+    text-shadow: 0 0 6px rgba(0,255,136,0.2);
+}
+table.table td:nth-child(1),
+table.table td:nth-child(3) {
+    font-weight: 500;
+    color: #e5e5e5;
+}
+
+/* =========================
+   PODIUM (TOP CARDS)
+========================= */
+.podium-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+/* Base podium card */
+.podium-card {
+    width: 190px;
+    padding: 18px;
+    border-radius: 14px;
+    text-align: center;
+    color: #111;
+    font-weight: bold;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    transition: all 0.25s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.podium-card:hover {
+    transform: translateY(-8px);
+}
+
+/* Winner emphasis */
+.podium-winner {
+    transform: scale(1.12);
+}
+
+/* Shine overlay */
+.podium-card::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.15), transparent 60%);
+    transform: rotate(25deg);
+}
+
+/* Podium colors */
 .gold {
-    background-color: #332200 !important;
+    background: linear-gradient(135deg, #fff2a6, #d4af37);
+    border: 2px solid #ffd700;
 }
 
 .silver {
-    background-color: #2a2a2a !important;
+    background: linear-gradient(135deg, #f5f5f5, #a9a9a9);
+    border: 2px solid #c0c0c0;
 }
 
 .bronze {
-    background-color: #2b1a12 !important;
+    background: linear-gradient(135deg, #e0a06b, #8b5a2b);
+    border: 2px solid #cd7f32;
 }
 
-/* Buttons */
+/* Podium text */
+.podium-rank {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.podium-name {
+    font-size: 1.15rem;
+}
+
+.podium-time {
+    font-family: "Courier New", monospace;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* =========================
+   FORMS
+========================= */
+.form-control {
+    background-color: #1a1a1a !important;
+    color: white !important;
+    border: 1px solid #333;
+}
+
+.form-control::placeholder {
+    color: #aaa;
+}
+
+label {
+    color: #ff2b2b;
+}
+
+/* =========================
+   LINKS
+========================= */
+a {
+    color: #ff4d4d;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff1a1a;
+}
+
+/* =========================
+   BUTTONS
+========================= */
 .btn-red {
     background-color: #ff2b2b;
     border: none;
@@ -75,29 +242,4 @@ table.table tbody tr:hover {
 .btn-outline:hover {
     background-color: #ff2b2b;
     color: white;
-}
-
-/* Forms */
-.form-control {
-    background-color: #1a1a1a !important;
-    color: white !important;
-    border: 1px solid #333;
-}
-
-.form-control::placeholder {
-    color: #aaa;
-}
-
-label {
-    color: #ff2b2b;
-}
-
-/* Links */
-a {
-    color: #ff4d4d;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #ff1a1a;
 }
