@@ -40,7 +40,7 @@ public class LaptimesController : Controller
     {
         _repo.UpdateCustomer(customer);
 
-        return RedirectToAction("ViewRacer", new { id = customer.customerid });
+        return RedirectToAction("ViewRacer", new { id = customer.CustomerID });
     }
 
     public IActionResult AddLaptime(int id)

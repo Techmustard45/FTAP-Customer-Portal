@@ -26,22 +26,22 @@
             <!-- 2nd -->
             <div class="podium-card silver">
                 <div class="podium-rank">🥈 2</div>
-                <div class="podium-name">@top3[1].racername</div>
-                <div class="podium-time">@top3[1].laptime</div>
+                <div class="podium-name">@top3[1].RacerName</div>
+                <div class="podium-time">@top3[1].Laptime</div>
             </div>
 
             <!-- 1st -->
             <div class="podium-card gold podium-winner">
                 <div class="podium-rank">🥇 1</div>
-                <div class="podium-name">@top3[0].racername</div>
-                <div class="podium-time">@top3[0].laptime</div>
+                <div class="podium-name">@top3[0].RacerName</div>
+                <div class="podium-time">@top3[0].Laptime</div>
             </div>
 
             <!-- 3rd -->
             <div class="podium-card bronze">
                 <div class="podium-rank">🥉 3</div>
-                <div class="podium-name">@top3[2].racername</div>
-                <div class="podium-time">@top3[2].laptime</div>
+                <div class="podium-name">@top3[2].RacerName</div>
+                <div class="podium-time">@top3[2].Laptime</div>
             </div>
 
         </div>
@@ -73,13 +73,13 @@
 
             <tr class="@rowClass">
                 <td>@ranking</td>
-                <td>@laptimes.laptime</td>
+                <td>@laptimes.Laptime</td>
                 <td>
-                    <a href="Laptimes/ViewRacer/@laptimes.customerid">
-                        @laptimes.racername
+                    <a href="Laptimes/ViewRacer/@laptimes.CustomerID">
+                        @laptimes.RacerName
                     </a>
                 </td>
-                <td>@laptimes.kart</td>
+                <td>@laptimes.Kart</td>
             </tr>
 
             ranking++;

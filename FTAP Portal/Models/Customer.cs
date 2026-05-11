@@ -2,12 +2,12 @@
 
 public class Customer
 {
-    public int customerid { get; set; }
-    public string racername { get; set; }
-    public int proskill {get; set;}
-    public int loyaltypoints {get; set;}
-    public double averagelaptime {get; set;}
-    public double fastestlaptime {get; set;}
-    public string email { get; set; }
-    public IEnumerable<Laptimes> laptimes { get; set; }
+    public int CustomerID { get; set; }
+    public string RacerName { get; set; }
+    public int Proskill {get; set;}
+    public int LoyaltyPoints {get; set;}
+    public double AverageLaptime {get; set;}
+    public double FastestLaptime {get; set;}
+    public string Email { get; set; }
+    public IEnumerable<Laptimes> Laptimes { get; set; }
 }

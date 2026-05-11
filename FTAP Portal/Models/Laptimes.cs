@@ -2,9 +2,9 @@
 
 public class Laptimes
 {
-    public double laptime { get; set; }
-    public string racername { get; set; }
-    public int kart { get; set; }
-    public int customerid { get; set; }
+    public double Laptime { get; set; }
+    public string RacerName { get; set; }
+    public int Kart { get; set; }
+    public int CustomerID { get; set; }
     public int LaptimeID { get; set; }
 }

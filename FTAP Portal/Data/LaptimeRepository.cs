@@ -24,7 +24,7 @@ public class LaptimeRepository : ILaptimeRepository
         var customer = _connection.QuerySingle<Customer>(
             "SELECT c.customerid, c.RacerName, c.ProSkill, c.LoyaltyPoints, c.email,ROUND(AVG(l.LapTime),3) AS AverageLapTime,MIN(l.LapTime) AS FastestLapTime FROM Customers c JOIN Laptimes l ON c.CustomerID = l.CustomerID WHERE c.customerid = @id GROUP BY c.RacerName, c.ProSkill, c.LoyaltyPoints;",
             new { id });
-        customer.laptimes = laptimeList;
+        customer.Laptimes = laptimeList;
         return customer;
     }
 
@@ -36,20 +36,20 @@ public class LaptimeRepository : ILaptimeRepository
     public void UpdateCustomer(Customer customer)
     {
         _connection.Execute("UPDATE customers SET racername = @racername, email = @email WHERE customerid = @id",
-            new {racername = customer.racername, email = customer.email, id = customer.customerid });
+            new {racername = customer.RacerName, email = customer.Email, id = customer.CustomerID });
     }
 
     public void AddLaptime(Laptimes laptimeToAdd)
     {
         _connection.Execute("INSERT INTO laptimes (LAPTIME, CUSTOMERID, KART) VALUES (@laptime, @customerid, @kart);",
-            new { laptime = laptimeToAdd.laptime, customerid = laptimeToAdd.customerid, kart = laptimeToAdd.kart});
+            new { laptime = laptimeToAdd.Laptime, customerid = laptimeToAdd.CustomerID, kart = laptimeToAdd.Kart});
     }
 
     public Laptimes AssignCustomer(int id)
     {
         var customerid = GetRacer(id);
         var laptime = new Laptimes();
-        laptime.customerid = customerid.customerid;
+        laptime.CustomerID = customerid.CustomerID;
         return laptime;
     }
     

@@ -4,29 +4,29 @@
 
     <!-- Header -->
     <div class="text-center mb-4">
-        <h2>Update @Model.racername</h2>
+        <h2>Update @Model.RacerName</h2>
     </div>
 
     <!-- Form Card -->
     <div class="card">
         @using (Html.BeginForm("UpdateCustomerToDatabase", "Laptimes", FormMethod.Post))
         {
-            <input asp-for="customerid" type="hidden" value="@Model.customerid" />
+            <input asp-for="CustomerID" type="hidden" value="@Model.CustomerID" />
 
             <div class="form-group mb-3">
-                <label asp-for="racername">Racer Name</label>
-                <input type="text" name="racername" class="form-control" value="@Model.racername" />
+                <label asp-for="RacerName">Racer Name</label>
+                <input type="text" name="racername" class="form-control" value="@Model.RacerName" />
             </div>
 
             <div class="form-group mb-4">
-                <label asp-for="email">Email</label>
-                <input type="email" name="email" class="form-control" value="@Model.email" />
+                <label asp-for="Email">Email</label>
+                <input type="email" name="email" class="form-control" value="@Model.Email" />
             </div>
 
             <!-- Buttons -->
             <div class="d-flex justify-content-between">
 
-                <a href="/Laptimes/ViewRacer/@Model.customerid" class="btn btn-outline">
+                <a href="/Laptimes/ViewRacer/@Model.CustomerID" class="btn btn-outline">
                     ⬅ Cancel
                 </a>
 
