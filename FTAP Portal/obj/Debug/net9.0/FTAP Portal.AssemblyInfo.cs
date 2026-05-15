@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FTAP Portal")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2b70d868b48f70419e2eea29ac9dbd47c0626385")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aeee8b9f26f8466847fbc60944bbc322d30ecaf8")]
 [assembly: System.Reflection.AssemblyProductAttribute("FTAP Portal")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FTAP Portal")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
